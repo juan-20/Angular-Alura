@@ -15,7 +15,7 @@ export class PhotoService{
 
         return this.http
         //tipado com objeto em array 
-        .get<Photo[]>(API + '/flavio/photos') 
+        .get<Photo[]>(API + '/' + userName +'/photos') 
    
 
     }
