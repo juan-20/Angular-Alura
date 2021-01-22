@@ -14,6 +14,8 @@
 
 <!-- é exibido oq é escrito automaticamente atribuido a propriedade filter -->
 <!-- {{filter}} -->
+<!-- pipe -->
+<!-- {{nome | uppercase }} deixa tudo em caixa alta -->
 
-<ap-photos [photos]="photos"></ap-photos>
+<ap-photos [photos]="photos | filterByDescription: filter"></ap-photos>
 
