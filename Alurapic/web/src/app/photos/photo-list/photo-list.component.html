@@ -1,1 +1,19 @@
+<div class="text-center mt-3 mb-3">
+    <form>
+        <input
+            class="rounded"
+            type="search"
+            placeholder="search..."
+            autofocus
+            (keyup)="filter = $event.target.value"
+            >
+            <!-- a cada parte que digitar ele pega e joga para filter -->
+            <!-- () é event biding (evento é disparado e vai da view do template para o componente) e [] é data biding (vc puxa o dado para o template) -->
+    </form>
+</div>
+
+<!-- é exibido oq é escrito automaticamente atribuido a propriedade filter -->
+<!-- {{filter}} -->
+
 <ap-photos [photos]="photos"></ap-photos>
+
