@@ -14,19 +14,22 @@ export class PhotoListComponent implements OnInit {
   filter: string = '';
 
 
-  constructor (private photoservice: PhotoService,
+  constructor (
+              // private photoservice: PhotoService,
               private activetedRoute: ActivatedRoute){ }
 
 
-  ngOnInit(){
+  ngOnInit(): void {
 
-    const userName = this.activetedRoute.snapshot.params.userName;
+    // const userName = this.activetedRoute.snapshot.params.userName;
 
   // console.log(http);
-  this.photoservice
-  .listFromUser(userName)
-  // se inscreave, consegue ler o json
-  .subscribe(photos => this.photos = photos);
+  // this.photoservice
+  // .listFromUser(userName)
+  // // se inscreave, consegue ler o json
+  // .subscribe(photos => this.photos = photos);
+
+   this.photos = this.activetedRoute.snapshot.data.photos
   }
 
 }
