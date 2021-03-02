@@ -1,14 +1,9 @@
 <div class="text-center mt-3 mb-3">
     <form>
-        <input
-            class="rounded"
-            type="search"
-            placeholder="search..."
-            autofocus
-            (keyup)="debounce.next($event.target.value)"
-            >
-            <!-- a cada parte que digitar ele pega e joga para filter -->
-            <!-- () é event biding (evento é disparado e vai da view do template para o componente) e [] é data biding (vc puxa o dado para o template) -->
+        <input class="rounded" type="search" placeholder="search..." autofocus
+            (keyup)="debounce.next($event.target.value)">
+        <!-- a cada parte que digitar ele pega e joga para filter -->
+        <!-- () é event biding (evento é disparado e vai da view do template para o componente) e [] é data biding (vc puxa o dado para o template) -->
     </form>
 </div>
 
@@ -20,4 +15,5 @@
 <ap-photos [photos]="photos | filterByDescription: filter"></ap-photos>
 
 
-<ap-load-button></ap-load-button>
+<!-- ele pega a variavel has more lá e ve se ele é true ou não -->
+<ap-load-button (click)="load()" [hasMore]="hasMore"></ap-load-button>
