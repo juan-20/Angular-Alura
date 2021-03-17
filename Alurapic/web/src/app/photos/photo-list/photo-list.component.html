@@ -1,5 +1,6 @@
 <div class="text-center mt-3 mb-3">
     <form>
+        <i aria-hidden="true" class="fa fa-search"></i>
         <input class="rounded" type="search" placeholder="search..." autofocus
             (keyup)="debounce.next($event.target.value)">
         <!-- a cada parte que digitar ele pega e joga para filter -->
@@ -12,7 +13,7 @@
 <!-- pipe -->
 <!-- {{nome | uppercase }} deixa tudo em caixa alta -->
 
-<ap-photos [photos]="photos | filterByDescription: filter"></ap-photos>
+<ap-photos [photos]="photos | FilterByDescription: filter"></ap-photos>
 
 
 <!-- ele pega a variavel has more lá e ve se ele é true ou não -->
